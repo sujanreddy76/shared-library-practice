@@ -7,7 +7,7 @@ def call(Map pipelineParams) {
         label 'java-label'
     }
     environment{
-        APPLICATION_NAME= pipelineParams.appName
+        APPLICATION_NAME= "${pipelineParams.appName}"
     }
     stages{
         stage('Building the application'){
