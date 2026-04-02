@@ -7,10 +7,10 @@ def call(Map pipelineParams) {
         label 'java-label'
     }
     environment{
-        APPLICATION_NAME="${pipelineParams.appName}"
+        APPLICATION_NAME= pipelineParams.appName
     }
     stages{
-        stage("Building the $APPLICATION_NAME application"){
+        stage('Building the application'){
             steps {
                 script{
                     mavenBuild.buildApp("$APPLICATION_NAME")
