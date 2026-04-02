@@ -1,7 +1,7 @@
 import com.sujantech.builds.MavenBuild
 
 def call(Map pipelineParams) {
-   MavenBuild mavenBuild = new newMavenBuild(this)
+   MavenBuild mavenBuild = new MavenBuild(this)
    pipeline {
     agent{
         label 'java-label'
